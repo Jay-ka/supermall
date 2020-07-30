@@ -9,11 +9,19 @@
 </template>
 
 <script>
-  import Swiper from "../../components/common/swiper/Swiper";
-  import SwiperItem from "../../components/common/swiper/SwiperItem";
+  import Swiper from "../../../components/common/swiper/Swiper";
+  import SwiperItem from "../../../components/common/swiper/SwiperItem";
   export default {
     name: "HomeSwiper",
-    comments: {
+    props: {
+      banners: {
+        type: Array,
+        default(){
+          return []
+        }
+      }
+    },
+    components: {
       Swiper,
       SwiperItem
     }
